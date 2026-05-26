@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report an Issue - UbuntuConnect</title>
+  <meta name="description" content="Report a bug, user, or inappropriate content to the UbuntuConnect team." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/subpages.css" />
+</head>
+<body>
+  <nav class="sub-navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <span class="logo-text">Ubuntu<span class="logo-highlight">Connect</span></span>
+      </a>
+      <div class="nav-right">
+        <a href="help-faq.html" class="nav-link">FAQ</a>
+        <a href="index.html#download" class="nav-cta">Download</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <div class="container">
+      <div class="page-header">
+        <a href="index.html" class="back-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Home</a>
+        <h1>Report an Issue</h1>
+        <p class="page-subtitle">Help us improve UbuntuConnect</p>
+      </div>
+
+      <div class="info-box">
+        <h3>We want to hear from you</h3>
+        <p>Found a bug, want to suggest a feature, or need to report something? Fill out the form below and we'll get back to you within 24-48 hours.</p>
+      </div>
+
+      <div id="successMsg" class="success-msg">Your report has been submitted. We'll review it and respond within 24-48 hours.</div>
+
+      <form id="reportForm" class="report-form">
+        <div class="form-group">
+          <label for="issueType">Issue Type <span class="required">*</span></label>
+          <select id="issueType" required>
+            <option value="">Select type...</option>
+            <option value="bug">Bug or Technical Issue</option>
+            <option value="user">Report a User</option>
+            <option value="content">Inappropriate Content</option>
+            <option value="feature">Feature Request</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email <span class="required">*</span></label>
+          <input type="email" id="email" placeholder="your@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject <span class="required">*</span></label>
+          <input type="text" id="subject" placeholder="Brief description of the issue" required />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description <span class="required">*</span></label>
+          <textarea id="description" placeholder="Tell us what happened in detail..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary submit-btn">Submit Report</button>
+      </form>
+
+      <hr class="divider" />
+
+      <div class="alt-options">
+        <h2 class="section-title">Other ways to reach us</h2>
+        <a href="mailto:support@ubuntuconnect.co.tz?subject=Support%20Request" class="alt-card">
+          <h3>Email us directly</h3>
+          <p>support@ubuntuconnect.co.tz</p>
+        </a>
+        <a href="help-faq.html" class="alt-card">
+          <h3>Browse FAQ</h3>
+          <p>Find quick answers to common questions</p>
+        </a>
+        <a href="contact-support.html" class="alt-card">
+          <h3>Contact Support</h3>
+          <p>Get in touch with our support team</p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="sub-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 UbuntuConnect. All rights reserved. Made with <svg viewBox="0 0 24 24" width="14" height="14" fill="#F36C6C" stroke="#F36C6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> for the HIV community.</p>
+      <div class="footer-page-links">
+        <a href="help-faq.html">FAQ</a>
+        <a href="contact-support.html">Contact</a>
+        <a href="report-issue.html">Report Issue</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+(function(){var t=localStorage.getItem('theme');if(!t)t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);document.querySelectorAll('.theme-toggle svg').forEach(function(s){s.innerHTML=t==='dark'?'<circle cx=\"12\" cy=\"12\" r=\"5\"/><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"/><line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\"/><line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\"/><line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\"/><line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\"/><line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\"/><line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\"/><line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\"/>':'<path d=\"M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\"/>'});window.toggleTheme=function(){var c=document.documentElement.getAttribute('data-theme')||'light',n=c==='dark'?'light':'dark';document.documentElement.classList.add('transitioning');document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.querySelectorAll('.theme-toggle svg').forEach(function(s){s.innerHTML=n==='dark'?'<circle cx=\"12\" cy=\"12\" r=\"5\"/><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"/><line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\"/><line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\"/><line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\"/><line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\"/><line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\"/><line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\"/><line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\"/>':'<path d=\"M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\"/>'});setTimeout(function(){document.documentElement.classList.remove('transitioning')},300)};})();
+</script>
+  <script>
+    document.getElementById('reportForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var type = document.getElementById('issueType').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var desc = document.getElementById('description').value;
+      var mailto = 'mailto:support@ubuntuconnect.co.tz?subject=' +
+        encodeURIComponent('[' + type.toUpperCase() + '] ' + subject) +
+        '&body=' + encodeURIComponent(
+          'Issue: ' + type + '\nEmail: ' + email + '\n\n' + desc + '\n\n---\nSent via UbuntuConnect'
+        );
+      window.location.href = mailto;
+      document.getElementById('successMsg').style.display = 'block';
+      this.reset();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

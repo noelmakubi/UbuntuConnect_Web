@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page_title">UbuntuConnect - HIV Dating & Support Community</title>
+  <meta name="description" content="UbuntuConnect - A safe dating and support community for people living with HIV. Connect, share, and build meaningful relationships." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <span class="logo-text">Ubuntu<span class="logo-highlight">Connect</span></span>
+      </div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#features" data-i18n="nav_features">Features</a>
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="help-faq.html" data-i18n="nav_faq">FAQ</a>
+          <a href="#download" class="nav-cta" data-i18n="nav_download">Download</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" data-lang="sw" onclick="setLanguage('sw')">SW</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero_badge">Safe Space for the HIV Community</div>
+        <h1 data-i18n="hero_title">Connect, Share &amp; Thrive<br/><span class="highlight">Together</span></h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          The first dating and social platform built by and for people living with HIV. Find meaningful relationships, professional counseling, and a supportive community that understands your journey.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary" onclick="downloadApk(event)">
+            <span class="btn-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </span>
+            <span data-i18n="btn_download_apk">Download APK</span>
+          </a>
+          <a href="#" class="btn btn-store disabled" data-i18n-title="coming_soon" title="Coming Soon">
+            <span class="btn-store-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm3.35-4.31c.34.27.59.69.59 1.19s-.25.92-.59 1.19l-2.42 1.44L15.46 12l2.28-2.28 2.42 1.44zM6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></svg>
+            </span>
+            <span data-i18n="btn_google_play">Google Play</span>
+            <span class="btn-subtitle" data-i18n="coming_soon">Coming Soon</span>
+          </a>
+          <a href="#" class="btn btn-store disabled" data-i18n-title="coming_soon" title="Coming Soon">
+            <span class="btn-store-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            </span>
+            <span data-i18n="btn_app_store">App Store</span>
+            <span class="btn-subtitle" data-i18n="coming_soon">Coming Soon</span>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span data-i18n="hero_private">100% Private &amp; Anonymous. Your status stays with you.</span>
+        </div>
+      </div>
+      <div class="hero-mockup">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="mockup-header">
+              <div class="mockup-dot"></div>
+              <span data-i18n="mockup_discover">Discover</span>
+              <div class="mockup-dot"></div>
+            </div>
+            <div class="mockup-card">
+              <div class="mockup-avatar"></div>
+              <div class="mockup-info">
+                <div class="mockup-name"></div>
+                <div class="mockup-detail"></div>
+              </div>
+            </div>
+            <div class="mockup-card card-2">
+              <div class="mockup-avatar"></div>
+              <div class="mockup-info">
+                <div class="mockup-name"></div>
+                <div class="mockup-detail"></div>
+              </div>
+            </div>
+            <div class="mockup-card card-3">
+              <div class="mockup-avatar"></div>
+              <div class="mockup-info">
+                <div class="mockup-name"></div>
+                <div class="mockup-detail"></div>
+              </div>
+            </div>
+            <div class="mockup-actions">
+              <div class="mockup-btn nope"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+              <div class="mockup-btn heart"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#F36C6C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="features_title">Everything You Need in <span class="highlight">One Place</span></h2>
+        <p data-i18n="features_subtitle">Designed with care for the HIV community &mdash; every feature built with your privacy, safety, and well-being in mind.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon swiper-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 data-i18n="feature_match_title">Smart Match &amp; Swipe</h3>
+          <p data-i18n="feature_match_desc">Discover compatible people near you with our intelligent matching algorithm. Swipe right to connect with those who share your journey and values.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon chat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 data-i18n="feature_chat_title">Private Messaging</h3>
+          <p data-i18n="feature_chat_desc">Chat securely with your matches in real-time. End-to-end encrypted conversations that respect your privacy every step of the way.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon community-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-i18n="feature_community_title">Community Forum</h3>
+          <p data-i18n="feature_community_desc">Share your story, ask questions, and connect through anonymous forum posts. A judgment-free space where your voice matters.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon support-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 data-i18n="feature_counseling_title">Professional Counseling</h3>
+          <p data-i18n="feature_counseling_desc">Book one-on-one or group sessions with trained HIV counselors. Get the support you need, when you need it.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon profile-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3 data-i18n="feature_profile_title">Authentic Profiles</h3>
+          <p data-i18n="feature_profile_desc">Create a genuine profile with photos, bio, and interests. Full control over what you share &mdash; including anonymous browsing options.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon privacy-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 data-i18n="feature_privacy_title">Privacy Controls</h3>
+          <p data-i18n="feature_privacy_desc">Total control over your privacy. Choose who sees your profile, manage status disclosure, and browse with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-extended" id="more-features">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="more_features_title">And <span class="highlight">So Much More</span></h2>
+        <p data-i18n="more_features_subtitle">Every detail designed to make your experience safe, supportive, and empowering.</p>
+      </div>
+      <div class="extended-grid">
+        <div class="ext-feature">
+          <div class="ext-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+          <div>
+            <h3 data-i18n="ext_swipe_title">Swipe &amp; Match Cards</h3>
+            <p data-i18n="ext_swipe_desc">Beautiful card-based swiping with photo galleries, bio previews, and instant match notifications.</p>
+          </div>
+        </div>
+        <div class="ext-feature">
+          <div class="ext-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div>
+            <h3 data-i18n="ext_forum_title">Anonymous Posting</h3>
+            <p data-i18n="ext_forum_desc">Share openly with the community while keeping your identity protected. Post anonymously or with your profile name.</p>
+          </div>
+        </div>
+        <div class="ext-feature">
+          <div class="ext-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="12" y1="9" x2="12" y2="15"/></svg></div>
+          <div>
+            <h3 data-i18n="ext_counselor_title">Expert Counselors</h3>
+            <p data-i18n="ext_counselor_desc">Browse professional counselors, check their availability, and book individual or group sessions directly in the app.</p>
+          </div>
+        </div>
+        <div class="ext-feature">
+          <div class="ext-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+          <div>
+            <h3 data-i18n="ext_notif_title">Smart Notifications</h3>
+            <p data-i18n="ext_notif_desc">Get notified when someone likes you, sends a message, or replies to your forum post. Never miss a connection.</p>
+          </div>
+        </div>
+        <div class="ext-feature">
+          <div class="ext-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div>
+            <h3 data-i18n="ext_location_title">Location-Based</h3>
+            <p data-i18n="ext_location_desc">Find meaningful connections in your region and district. Meet people near you who understand your journey.</p>
+          </div>
+        </div>
+        <div class="ext-feature">
+          <div class="ext-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div>
+            <h3 data-i18n="ext_community_title">Local Communities</h3>
+            <p data-i18n="ext_community_desc">Join community groups based on your region. Attend local events and build a support network near you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-container">
+      <div class="about-content">
+        <div class="section-header left">
+          <h2 data-i18n="about_title">Built on <span class="highlight">Ubuntu</span></h2>
+          <p data-i18n="about_subtitle">"I am because we are" &mdash; we believe no one should face their journey alone.</p>
+        </div>
+        <div class="about-text">
+          <p data-i18n="about_text_1">UbuntuConnect was created to fill a critical gap &mdash; a safe, affirming space where people living with HIV can find love, friendship, support, and professional guidance without fear of stigma or discrimination.</p>
+          <p data-i18n="about_text_2">Whether you're newly diagnosed or have been living with HIV for years, our platform empowers you to connect authentically, access professional counseling, and become part of a community that truly understands.</p>
+          <p data-i18n="about_text_3">Your status does not define you. Your connections do. UbuntuConnect &mdash; because we are stronger together.</p>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-number count-up" data-target="5000">0</span>
+          <span class="stat-label" data-i18n="stat_users">Community Members</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number count-up" data-target="1000">0</span>
+          <span class="stat-label" data-i18n="stat_matches">Connections Made</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number count-up" data-target="50">0</span>
+          <span class="stat-label" data-i18n="stat_counselors">Certified Counselors</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number count-up" data-target="25">0</span>
+          <span class="stat-label" data-i18n="stat_regions">Regions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="testimonial_title">Stories from <span class="highlight">Our Community</span></h2>
+        <p data-i18n="testimonial_subtitle">Real voices from real people who found connection and support on UbuntuConnect.</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p data-i18n="testimonial_1">"For the first time, I felt like I could be completely honest about my status and still be accepted. I found my partner here, and we support each other every day."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"></div>
+            <div>
+              <strong>&mdash; Sarah M.</strong>
+              <span data-i18n="testimonial_1_role">Member since 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p data-i18n="testimonial_2">"The counseling feature changed my life. I was struggling after my diagnosis, and my counselor helped me find hope and self-acceptance. I'm forever grateful."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"></div>
+            <div>
+              <strong>&mdash; James K.</strong>
+              <span data-i18n="testimonial_2_role">Member since 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p data-i18n="testimonial_3">"The community forum is a lifeline. Being able to ask questions anonymously and get support from people who understand has been invaluable on my journey."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"></div>
+            <div>
+              <strong>&mdash; Amina R.</strong>
+              <span data-i18n="testimonial_3_role">Member since 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="download" id="download">
+    <div class="container download-container">
+      <div class="section-header">
+        <h2 data-i18n="download_title">Start Your <span class="highlight">Journey</span></h2>
+        <p data-i18n="download_subtitle">Join a community that celebrates you for who you are. Download UbuntuConnect today.</p>
+      </div>
+      <div class="download-buttons">
+        <a href="#" class="btn btn-primary download-btn" onclick="downloadApk(event)">
+          <span class="btn-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
+          <span>
+            <span data-i18n="btn_download_apk">Download APK</span>
+            <small data-i18n="android_version">Android 8.0+</small>
+          </span>
+        </a>
+        <a href="#" class="btn btn-store disabled">
+          <span class="btn-store-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm3.35-4.31c.34.27.59.69.59 1.19s-.25.92-.59 1.19l-2.42 1.44L15.46 12l2.28-2.28 2.42 1.44zM6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></svg>
+          </span>
+          <span>
+            <span data-i18n="btn_google_play">Google Play</span>
+            <small data-i18n="coming_soon">Coming Soon</small>
+          </span>
+        </a>
+        <a href="#" class="btn btn-store disabled">
+          <span class="btn-store-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          </span>
+          <span>
+            <span data-i18n="btn_app_store">App Store</span>
+            <small data-i18n="coming_soon">Coming Soon</small>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="logo-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <span class="logo-text">Ubuntu<span class="logo-highlight">Connect</span></span>
+        <p class="footer-tagline" data-i18n="footer_tagline">A safe space for the HIV community. You are not alone.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-i18n="footer_app">App</h4>
+          <a href="#features" data-i18n="nav_features">Features</a>
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#download" data-i18n="nav_download">Download</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_support">Support</h4>
+          <a href="mailto:support@ubuntuconnect.co.tz" data-i18n="footer_contact">Contact Us</a>
+          <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer_terms">Terms of Service</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_resources">Resources</h4>
+          <a href="help-faq.html" data-i18n="resource_faq">FAQ</a>
+          <a href="contact-support.html" data-i18n="footer_contact">Contact Us</a>
+          <a href="report-issue.html">Report Issue</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="footer_copyright">&copy; 2026 UbuntuConnect. All rights reserved. Made with <svg viewBox="0 0 24 24" width="14" height="14" fill="#F36C6C" stroke="#F36C6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> for the HIV community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="apk-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <div class="modal-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#F36C6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+      <h2 data-i18n="modal_title">Download UbuntuConnect</h2>
+      <p data-i18n="modal_desc">Enter your email to receive the APK download link:</p>
+      <form onsubmit="handleDownload(event)">
+        <input type="email" id="email-input" data-i18n-placeholder="modal_placeholder" placeholder="your@email.com" required />
+        <button type="submit" class="btn btn-primary modal-btn" data-i18n="modal_btn">Send Download Link</button>
+      </form>
+      <a href="#" class="modal-direct" onclick="directDownload(event)" data-i18n="modal_direct">Or download directly</a>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
